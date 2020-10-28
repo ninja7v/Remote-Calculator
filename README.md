@@ -1,6 +1,6 @@
 # Calculator
 
-Calculator coded by Luc PREVOST and 1 class mates !
+Calculator coded in Java by Luc PREVOST and 1 class mates !
 
 Du côté du Service nous avons 5 fichiers :
 - L’interface : Calcul.java
