@@ -1,38 +1,27 @@
-# Calculator
+# Remote Calculator
 
-Calculator coded in Java by Luc PREVOST and 1 class mates !
+GUI for a remote calculator coded in Java by Luc PREVOST.
 
-Du côté du Service nous avons 5 fichiers :
-- L’interface : Calcul.java
-Elle contient la signature de la fonction calcul.
-- Le contenu de la fonction calcul elle même : CalculImpl.java
-On gère les expeptions avec le mot clef throw.
-- Les Erreurs : DivisionParZero.java, NombreNegatif.java, ResultatNegatif.java
-On utilise super() qui permet d’appeler le contructeur parent.
+![remote_calculator](https://user-images.githubusercontent.com/52052772/141867267-e179cb66-737c-4c00-9a8d-0fe2dcd2bffa.png)
 
-Du côté du Serveur nous avons 1 fichier :
-- L’interface : Calcul.java
-On cree un skeleton avec UnicastRemoteObject.exportObject(new CalculImpl(),0) puis un registre.
-On ecrit un message d’information chez le serveur.
-On lie (bind) ou on on lie en écrasant (rebind) si "Calculator" existe dans le
-serveur des noms.
+📃 INSTRUCTIONS
+============
+## 🚀Execution
+Remote Calculator uses the folowing libraries :
+- [Awt](https://docs.oracle.com/javase/7/docs/api/java/awt/package-summary.html)
+- [Rmi](https://docs.oracle.com/javase/tutorial/rmi/index.html)
+- [Swing](https://docs.oracle.com/javase/7/docs/api/javax/swing/package-summary.html)
+- [Util](https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html)
 
-Du côté du Client nous avons 1 fichier :
-- InterfaceGraphique.java :
-Ce fichier est composé de 2 classes : InterfaceGraphique() et MyActionListener.
-La première consiste à afficher la calculatrice et à détecter les événements à
-déclencher.
-On créer la zone au premier niveau avec BorderLayout().
-on rempli ensuite la zone de le texte (au nord) avec JTextField et de panneau
-(au centre) avec GridLayout.
-Ce panneau est lui-même rempli de boutons avec JButton.
-On récupère les actions de l’utilisateur (ici les clics de la souris) avec addAction-
-Listener. La deuxième permet gerer les actions commandées par l’utilisateur.
-Pour effacer le dernier caractère on utilise input.substring.
-Pour ajouter un caractère on utilise input += " " + actionCommand + " ".
-Les 2 espaces servant à séparer.
-On comunique ensuite avec le RMI
+To execute it, compile every file in the server repertory, place the '.class' files in the client repertory, and compile the 'GUI.java' file in the client side. Finally, run the 'ServerCalculation.java' on the server side, then the 'GUI.java' file on the client side. This is roughly the procedure described by [Oracle](https://docs.oracle.com/javase/7/docs/technotes/guides/rmi/hello/hello-world.html).
 
-Pour exécuter on complile les fichiers .java dans le Service, le Serveur et le Client.
-On copie les .class du Service dans le Servieur et dans le Client.
-On exécute le Serveur puis le Client.
+As a result, a window pops up on the client side.
+
+## ⚙️Usage
+This program supports integer number only. To enter an operation, you can use the buttons or type it. The input must have the template: a␣operator␣b. If you type it, don't forget the spaces. An invalid form entry will result in an error. Also, an exception is created in case of a division by zero.
+
+Now it is your turn to use it !
+
+Thank you for using Remote calculator 🙂
+
+Just compute !
