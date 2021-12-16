@@ -1,4 +1,4 @@
-// Service side
+// Server side
 
 public class DivisionByZero extends Exception {
 	public DivisionByZero () {
