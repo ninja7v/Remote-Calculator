@@ -1,4 +1,4 @@
-// Service side
+// Server side
 
 // Remote Method Invocation
 import java.rmi.*;
